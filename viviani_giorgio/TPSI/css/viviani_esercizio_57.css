@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.cv {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "sidebar contenuto";
+  max-width: 900px;
+  width: 100%;
+  min-height: 900px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+}
+
+/* === SIDEBAR (grid of grid) === *//* === SIDEBAR (grid of grid) === */
+.sidebar {
+  grid-area: sidebar;
+  background: #3a3a3a;
+  color: #fff;
+  padding: 40px 25px;
+  display: grid;
+  grid-template-areas:
+    "foto"
+    "contatti"
+    "profilo"
+    "nome";
+  grid-template-rows: auto auto 1fr auto;
+  row-gap: 20px;
+  text-align: center;
+}
+
+.foto {
+  grid-area: foto;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contatti {
+  grid-area: contatti;
+  font-size: .85rem;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.profilo {
+  grid-area: profilo;
+  text-align: left;
+}
+
+.profilo .titolo {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+}
+
+.profilo .testo {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.nome {
+  grid-area: nome;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: auto;
+}
+
+
+.contenuto {
+  grid-area: contenuto;
+  padding: 40px 35px;
+  display: grid;
+  grid-template-areas:
+    "esperienze"
+    "certificazioni";
+  grid-template-rows: auto 1fr;
+  row-gap: 35px;
+}
+
+.sez-esperienze {
+  grid-area: esperienze;
+}
+
+.sez-certificazioni {
+  grid-area: certificazioni;
+}
+
+.titolo {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-titolo {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-testo {
+  font-size: 15px;
+  color: #444;
+}
+@media (max-width: 700px) {
+  .cv {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar"
+      "contenuto";
+  }
+  .sidebar {
+    padding: 30px 20px;
+  }
+  .profilo {
+    text-align: center;
+  }
+  .contenuto {
+    padding: 25px 20px;
+  }
+}   
