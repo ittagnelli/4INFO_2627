@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    
+}
+
+.div {
+    border-radius: 5px;
+    text-align: justify;
+    padding: 30px;
+    background-color: aqua;
+    margin: 7px;
+}
+
+.a {
+    grid-column: 1 / 3;
+}
+.b {
+    grid-column: 3 /3 ;
+    grid-row: 1 / 3;
+}

@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.div {
+    border-radius: 5px;
+    text-align: justify;
+    padding: 30px;
+    background-color: aqua;
+    margin: 7px;
+}
