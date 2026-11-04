@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- HTML5-->
+<html lang="it"><!-- Pagina HTML --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Qui vanno inserite informazioni relative alla pagina ma che non saranno visualizzate -->
+    <!-- sezione meta Fornisce informazioni al web browser e ai motori di ricerca per il processo di indicizzazione -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Antonio Mancuso">
+    <meta name="description" content="Empty Page">
+    <meta name="keywords" content="js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empty</title>
+    <script src="./costanzo_esercizio_js_04.js"></script>
+    <style>
+        .rosso {color:red;}
+        .blu {color:blue;}
+        .grassetto {font-weight: bold;}
+    </style>
+</head>
+
+<body>
+    <h1>Pagina studenti</h1>
+
+    <table border="2"> 
+        <thead>
+            <tr>
+                <th>
+                    <label for="cognome"></label>
+                    <input type="text" id="cognome" name="cognome" placeholder="inserisci cognome">
+                </th>
+                <th>
+                    <label for="media"></label>
+                    <input type="number" id="media" name="media">
+                </th>
+                <th>
+                    <button onclick="aggiungiStudente()">Aggiungi</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="corpo">
+            <tr>
+                <td>Cognome</td>
+                <td>Media</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="colora()">Colora</button>
+    <button onclick="grassetto()">Grassetto</button>
+    <button onclick="blue()">Blue</button>
+
+</body></html>
