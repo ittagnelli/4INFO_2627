@@ -1,0 +1,1 @@
+alert("My journey with JS!!")
