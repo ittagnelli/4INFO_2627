@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- HTML5-->
+<html lang="it">
+<!-- Pagina HTML -->
+
+<head>
+    <!-- Qui vanno inserite informazioni relative alla pagina ma che non saranno visualizzate -->
+    <!-- sezione meta Fornisce informazioni al web browser e ai motori di ricerca per il processo di indicizzazione -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Antonio Mancuso" />
+    <meta name="description" content="Empty Page" />
+    <meta name="keywords" content="js" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="Lupo_esercizio_js_06.js"></script>
+    <title>Esercizio_JS_06</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pagina Vuota</h1>
+
+    <input id="nome" type="text" placeholder="Nome Studente" class="cio ciao lolo">
+    <input id="media" type="number" max="10" min="0" placeholder="Media">
+    <button onclick="aggiungi_dati()">Aggiungi i dati</button>
+    <button onclick="color()">Colora</button>
+    <br> <br>
+    <button onclick="grassetto()">Grassetto</button>
+    <button onclick="blu()">Blu</button>
+    <button onclick="bordo()">Bordo</button>
+    <br>
+    
+    <table>
+        <thead>
+            <tr>
+                <th class="border">Nome Studente</th>
+                <th class="border">Media</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
