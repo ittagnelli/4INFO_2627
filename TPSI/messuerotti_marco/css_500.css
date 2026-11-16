@@ -1,0 +1,16 @@
+div>div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: gray;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+}
+.main{
+    border:1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    justify-content: space-between;
+    row-gap: 30px;
+}
