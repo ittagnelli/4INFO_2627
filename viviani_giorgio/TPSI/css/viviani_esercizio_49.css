@@ -1,0 +1,56 @@
+body {
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    ".    a  a  a  b  c"
+    "d    e  e  e  f  g"
+    "d    e  e  e  h  i"
+    "d    e  e  e  j  k"
+    "l    m  n  o  z  z"
+    "r    s  t  u  z  z"
+    "v    w  x  y  z  z";
+}
+
+.cell {
+  border: 2px solid red;
+  display: grid;
+  place-items: center;
+  background: white;
+}
+
+/* ogni cella ocupa la sua area */
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+.g { grid-area: g; }
+.h { grid-area: h; }
+.i { grid-area: i; }
+.j { grid-area: j; }
+.k { grid-area: k; }
+.l { grid-area: l; }
+.m { grid-area: m; }
+.n { grid-area: n; }
+.o { grid-area: o; }
+.r { grid-area: r; }
+.s { grid-area: s; }
+.t { grid-area: t; }
+.u { grid-area: u; }
+.v { grid-area: v; }
+.w { grid-area: w; }
+.x { grid-area: x; }
+.y { grid-area: y; }
+.z { grid-area: z; }
