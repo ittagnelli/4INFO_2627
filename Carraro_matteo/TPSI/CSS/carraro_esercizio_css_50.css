@@ -1,0 +1,20 @@
+#cont{
+    display: grid;
+    margin: auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    width: 300px;
+    height: 120px;
+    text-transform: uppercase;
+    text-align: left;
+    grid-template-columns: repeat(3,1fr);
+    color: white;
+}
+
+.item{
+    background-color: rgb(51, 50, 50);
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: large;
+}
