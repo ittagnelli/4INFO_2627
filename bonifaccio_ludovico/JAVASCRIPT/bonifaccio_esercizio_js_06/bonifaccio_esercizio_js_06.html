@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!-- HTML5-->
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Antonio Mancuso" />
+    <meta name="description" content="Calcolo della media dei voti degli studenti" />
+    <meta name="keywords" content="js, media, voti" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEDIA STUDENTI</title>
+    
+    <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="cognome_esercizio_js_06.css" />
+    
+    <!-- Collegamento al file JavaScript esterno -->
+    <script src="cognome_esercizio_js_06.js"></script>
+</head>
+<body>
+    <h1>MEDIA STUDENTI</h1>
+    <p>Inserisci i voti degli studenti per calcolare la media.</p>
+    <input id="nome" type="text" placeholder="Nome Studente" />
+    <input id="voto" type="number" placeholder="Voto Studente" />
+    <button onclick="add_studente()">Aggiungi uno studente</button>
+    
+    <!-- Bottoni per la modifica dinamica dello stile -->
+    <button onclick="toggleGrassetto()">Grassetto</button>
+    <button onclick="toggleBlue()">Blue</button>
+    <button onclick="toggleBordo()">Bordo</button>
+
+    <table id="tabellaStudenti">
+        <tr id="tr">
+            <th>Nome</th>
+            <th>Voto</th>
+        </tr>
+    </table>
+</body>
+</html>
