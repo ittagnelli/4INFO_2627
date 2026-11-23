@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 80%;
+}
+
+#tdItem {
+    width: 50%;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+hr {
+    background-color: gray;
+    height: 10px;
+    width: 80%;
+}
+
+.fatto {
+    text-decoration: line-through;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.material-symbols-outlined:hover {
+    font-weight: bold;
+}
