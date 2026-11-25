@@ -5,31 +5,40 @@ function svuota() {
     document.getElementById('telefono').value = ''
 }
 
+function get(id) {
+    return document.getElementById(id).value
+}
+
+function create(what) {
+    return document.createElement(what)
+}
+
 function salva() {
+    const ID = Date.now()
     const tbody = document.getElementsByTagName('tbody')
 
-    let cognome = document.getElementById('cognome').value
-    let nome = document.getElementById('nome').value
-    let indirizzo = document.getElementById('indirizzo').value
-    let telefono = document.getElementById('telefono').value
+    let cognome = get('cognome')
+    let nome = get('nome')
+    let indirizzo = get('indirizzo')
+    let telefono = get('telefono')
 
     if (cognome != '' &&
         nome != '' &&
         indirizzo != '' &&
         telefono != '') {
 
-        let tr = document.createElement('tr')
-        let tdCognome = document.createElement('td')
-        let tdNome = document.createElement('td')
-        let tdIndirizzo = document.createElement('td')
-        let tdTelefono = document.createElement('td')
-        let tdButton = document.createElement('td')
+        let tr = create('tr')
+        tr.id = ID
+        let tdCognome = create('td')
+        let tdNome = create('td')
+        let tdIndirizzo = create('td')
+        let tdTelefono = create('td')
+        let tdButton = create('td')
         tdButton.colSpan = 2
-        let button = document.createElement('button')
+        let button = create('button')
         button.innerText = 'Rimuovi'
-        button.addEventListener('click', function() {
-            tr.remove()
-        })
+        button.id = ID
+        button.addEventListener('click', rimuovi)
 
         tdCognome.innerText = cognome
         tr.append(tdCognome)
@@ -49,13 +58,23 @@ function salva() {
         alert('Riempi tutti i campi')
     }
 }
+  
+function rimuovi(evento) {
+    const ID = evento.srcElement.id
+    let tr = document.getElementsByTagName('tr')
+    for (let i = 2; i < tr.length; i++) {
+        if (tr[i].id == ID) {
+            tr[i].remove()
+        }
+    }
+}
 
 function cerca() {
     const ID = Date.now()
     let tr = document.getElementsByTagName('tr')
-    let cognome = document.getElementById('cognome').value
-    let telefono = document.getElementById('telefono').value
-    let pulsante = document.getElementsByClassName('aggiorna')
+    let cognome = get('cognome')
+    let telefono = get('telefono')
+    let aggiorna = document.getElementsByClassName('aggiorna')
 
     if (cognome == '' &&
         telefono == '') {        
@@ -67,12 +86,14 @@ function cerca() {
             if (td[0].innerText == cognome || 
                 td[3].innerText == telefono) {
                 tr[i].id = ID
-                pulsante[0].id = ID
+                aggiorna[0].id = ID
                 
                 document.getElementById('cognome').value = td[0].innerText
                 document.getElementById('nome').value = td[1].innerText
                 document.getElementById('indirizzo').value = td[2].innerText
                 document.getElementById('telefono').value = td[3].innerText
+                let button = td[4].children
+                button[0].id = ID
                 return
             }
         }
@@ -81,17 +102,25 @@ function cerca() {
 }
 
 function aggiorna(evento) {
-    const ID = evento.target.id
+    const ID = evento.srcElement.id
 
-    if (ID == undefined) {
+    if (ID == '') {
         alert("Cerca un contatto prima di aggiornarlo")
     }
     else {
         let tr = document.getElementsByTagName('tr')
-        let cognome = document.getElementById('cognome').value
-        let nome = document.getElementById('nome').value
-        let indirizzo = document.getElementById('indirizzo').value
-        let telefono = document.getElementById('telefono').value
+        let cognome = get('cognome')
+        let nome = get('nome')
+        let indirizzo = get('indirizzo')
+        let telefono = get('telefono')
+
+        if (cognome == '' ||
+            nome == '' ||
+            indirizzo == '' ||
+            telefono == '') {
+                alert("Riempi tutti i campi per aggiornare")
+                return
+            }
 
         for (let i = 2; i < tr.length; i++) {
             if (tr[i].id == ID) {
